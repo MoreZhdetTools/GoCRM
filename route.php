@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET')
                 include 'views/errors/404.html';
                 break;
     		}
-        
+    
     }
 } 
 else 
