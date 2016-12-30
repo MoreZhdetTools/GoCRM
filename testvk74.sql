@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-`id` int(10) NOT NULL,
+  `id` int(10) NOT NULL,
   `vk_id` int(10) NOT NULL,
   `vk_first_name` varchar(200) NOT NULL,
   `vk_last_name` varchar(200) NOT NULL,
@@ -53,7 +53,7 @@ INSERT INTO `users` (`id`, `vk_id`, `vk_first_name`, `vk_last_name`, `last_login
 --
 
 CREATE TABLE IF NOT EXISTS `vk_friends` (
-`id` int(10) NOT NULL,
+  `id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `vk_friend_id` varchar(200) NOT NULL,
   `vk_fio` varchar(200) NOT NULL,
