@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteBase /    
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+DirectoryIndex route.php            
+RewriteRule ^(.*)$ route.php [L]    
+php_flag display_errors off      
+RewriteRule ^/.htaccess$ - [G]  
+
+#1.Вкл обработку правил
+#2.Обрезаю полный путь 
+#3.Условие, что все существующие папки не будут обрабатываться регулярным выражением
+#4.Условие, что все существующие файлы не будут обрабатываться регулярным выражением
+#5.Устанавливаю индексную страницу route.php
+#6.Перенаправление на индексную страницу (для роутинга)
+#7.Отключение ошибок на продакшене
